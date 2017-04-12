@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { MainPage } from '../pages/main/main';
+import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { ProfilePage } from '../pages/profile/profile';
 import { ChatPage } from '../pages/chat/chat';
@@ -17,10 +17,11 @@ import { LandingPage } from '../pages/landing/landing';
   declarations: [
     MyApp,
     HomePage,
-    MainPage,
+    LoginPage,
     ProfilePage,
     ChatPage,
-    LandingPage
+    LandingPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -30,10 +31,11 @@ import { LandingPage } from '../pages/landing/landing';
   entryComponents: [
     MyApp,
     HomePage,
-    MainPage,
+    LoginPage,
     ProfilePage,
     ChatPage,
-    LandingPage
+    LandingPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

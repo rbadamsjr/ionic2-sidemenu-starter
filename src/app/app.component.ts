@@ -18,7 +18,16 @@ export class MyApp {
   platform: Platform;
   @ViewChild(Nav) nav: Nav;
 
+  pages: Array<{title: string, component: any}>;
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    this.pages = [
+      {title: 'Home', component: HomePage},
+      {title: 'About', component: AboutPage},
+      {title: 'Profile', component: ProfilePage},
+      {title: 'Chat', component: ChatPage},
+      {title: 'Exit', component: null}
+    ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -29,5 +38,9 @@ export class MyApp {
 
   go_to_profile(Page){
     this.nav.setRoot(ProfilePage);
+  }
+
+  openPage(page){
+    this.nav.setRoot(page.component);
   }
 }
