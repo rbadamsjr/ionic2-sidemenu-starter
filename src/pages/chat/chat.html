@@ -21,10 +21,17 @@
 
 
 <ion-content class="card-background-page">
+  <div style="padding: 5px 5px 0 5px;">
+    <button ion-button full>Create a group</button>
+</div>
+<ion-list *ngFor="let cg of chatGroups">
 
   <ion-card>
-    <img src="http://placehold.it/300x150"/>
-    <div class="card-title">General</div>
-    <div class="card-subtitle"># Comments</div>
+    <img src={{cg.imgSrc}}/>
+    <div class="card-title">{{cg.groupName}}</div>
+    <div class="card-subtitle">{{cg.count}} Comments</div>
   </ion-card>
+
+</ion-list>
+
 </ion-content>
