@@ -1,28 +1,11 @@
 <ion-menu side="left" [content]="content">
     <ion-header>
-        <ion-toolbar>
+        <ion-toolbar color="primary">
             <ion-title>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content>
         <ion-list>
-          <!--
-            <ion-item (click)="go_to_home()" menuClose>
-                Home
-            </ion-item>
-            <ion-item (click)="go_to_about()" menuClose>
-                About
-            </ion-item>
-             <ion-item (click)="go_to_contact()" menuClose>
-                Profile
-            </ion-item>
-            <ion-item (click)="go_to_contact()" menuClose>
-               Chat
-           </ion-item>
-           <ion-item (click)="go_to_contact()" menuClose>
-              Logout
-          </ion-item>
-        -->
         <button ion-item *ngFor="let p of pages" (click)="openPage(p)" menuClose>
           {{p.title}}
         </button>
